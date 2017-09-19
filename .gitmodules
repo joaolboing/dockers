@@ -1,0 +1,18 @@
+[submodule "apache"]
+	path = apache
+	url = https://github.com/joaolboing/docker-apache
+[submodule "apache-php5-xdebug"]
+	path = apache-php5-xdebug
+	url = https://github.com/joaolboing/docker-apache-php5-xdebug
+[submodule "apache-php5"]
+	path = apache-php5
+	url = https://github.com/joaolboing/docker-apache-php5
+[submodule "apache-php7"]
+	path = apache-php7
+	url = https://github.com/joaolboing/docker-apache-php7
+[submodule "apache-php7-xdebug"]
+	path = apache-php7-xdebug
+	url = https://github.com/joaolboing/docker-apache-php7-xdebug
+[submodule "ubuntu"]
+	path = ubuntu
+	url = https://github.com/joaolboing/docker-ubuntu

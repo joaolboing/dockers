@@ -1,0 +1,7 @@
+{
+  "name": "Conectra",
+  "homepage": "http://satis.conectra.com.br",
+  "repositories": [
+  ],
+  "require-all": true
+}
