@@ -189,6 +189,14 @@ if [[ "$RUN_SCRIPTS" == "1" ]] ; then
   fi
 fi
 
+
+# Enable Redis PHPSESSION
+RedisConfFile='/usr/local/etc/php/conf.d/docker-php-ext-redis.ini'
+if [[ ! -z "$REDIS_URL" ]] ; then
+  echo 'session.save_handler = redis' >> $RedisConfFile
+  echo 'session.save_path = ${REDIS_URL}' >> $RedisConfFile
+fi
+
 # Try auto install for composer
 # if [ -f "/var/www/html/composer.lock" ]; then
 #     if [ "$APPLICATION_ENV" == "development" ]; then
