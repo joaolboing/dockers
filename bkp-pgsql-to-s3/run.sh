@@ -4,7 +4,7 @@ export PGPASSWORD=${DB_PASS}
 
 DATE=`date +%Y-%m-%d_%H-%M`
 
-BKPNAME=${DB_NAME}-${DATE}
+BKPNAME=${BKP_PREFIX}${DB_NAME}-${DATE}
 
 echo $(date) "Backup iniciado"
 pg_dump -h ${DB_HOST} -p ${DB_PORT} -U${DB_USER} -Fc -c ${DB_NAME} -f /tmp/${BKPNAME}.sql
