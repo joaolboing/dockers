@@ -7,7 +7,7 @@ DATE=`date +%Y-%m-%d_%H-%M`
 BKPNAME=${DB_NAME}-${DATE}
 
 echo $(date) "Backup iniciado"
-pg_dump -h ${DB_HOST} -p ${DB_PORT} -U${DB_USER} -Fp -c ${DB_NAME} -f /tmp/${BKPNAME}.sql
+pg_dump -h ${DB_HOST} -p ${DB_PORT} -U${DB_USER} -Fp -c -C -O ${DB_NAME} -f /tmp/${BKPNAME}.sql
 
 echo $(date) "Compactando backup"
 tar -zcvf /tmp/${BKPNAME}.tar.gz /tmp/${BKPNAME}.sql
