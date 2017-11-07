@@ -1,5 +1,7 @@
 #!/bin/sh
 
+rm -rf /tmp/*
+
 export PGPASSWORD=${DB_PASS}
 
 DATE=`date +%Y-%m-%d_%H-%M`
