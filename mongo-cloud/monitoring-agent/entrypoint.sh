@@ -3,6 +3,10 @@ set -e
 
 #: ${MMS_SERVER:=https://mms.mongodb.com}
 
+curl -sSL https://mms.mongodb.com/download/agent/monitoring/mongodb-mms-monitoring-agent-latest.x86_64.rhel7.rpm -o mms.rpm \
+     && rpm -U mms.rpm \
+     && rm mms.rpm
+
 if [ ! "$MMS_API_KEY" ] || [ ! "$MMS_GROUP_ID" ]; then
 	{
 		echo 'error: MMS_API_KEY and MMS_GROUP_ID must be specified'
