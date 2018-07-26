@@ -16,3 +16,6 @@
 [submodule "ubuntu"]
 	path = ubuntu
 	url = https://github.com/joaolboing/docker-ubuntu
+[submodule "alpine-pdftk"]
+	path = alpine-pdftk
+	url = https://github.com/omarmarquez/alpine-pdftk
